@@ -20,3 +20,5 @@ npm run build
 <!-- Commands -->
 
 i--npm create vite@latest
+ii---npm install
+iii---npm run dev
