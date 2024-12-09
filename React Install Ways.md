@@ -1,4 +1,4 @@
-## Slow Way:
+## Slow Way:(Use Npx)
 
 <!-- Commands -->
 --Node js ka latest version download kea--
@@ -13,3 +13,10 @@ Ab run krny k ways ye hain:
 npm start
 npm run start   (better way to run)
 npm run build
+
+
+## Fast Way:(Use Vite)
+
+<!-- Commands -->
+
+i--npm create vite@latest
