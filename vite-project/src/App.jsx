@@ -7,7 +7,8 @@ function App() {
   const name = "Noor Fatima";
   return (
    <>
-   <h1>Chai aur React | Noor Fatima </h1>
+   <h1>Chai aur React {name} </h1>    {/*Evaluator Expession kehty hain isko {name}==>means final outcome yani isk andr hum koi conditions wagira ni likh skty wo aghr likhni hain tu oper return sy bhr jahan mrzi likh lain lkin yahan nahi*/}
+
    </>
   )
 }

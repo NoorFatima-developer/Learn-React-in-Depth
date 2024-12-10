@@ -5,8 +5,8 @@ import App from './App.jsx'
 
 // Ab compiler jo h babel wo jsx yani js k andr jo ye html code h osko js m convert kr rha hai behind the scene...
 
-
 function MyApp(){
+
   return (
     <div>
       <h1>My First React App</h1>
@@ -49,15 +49,15 @@ const createElement = React.createElement(
 
 createRoot(document.getElementById('root')).render(
   
-  // <StrictMode>
-  //   {/* <MyApp /> */}
-  //   {/* lkin ye tu kam e ni kr rha ku k isk andr object hau chlo new func bana k dekhti o */}
-  //   {/* <createElement1 /> */} //Not working...
-  // </StrictMode>,
+  <StrictMode>
+   <App />
+  {/* lkin ye tu kam e ni kr rha ku k isk andr object hau chlo new func bana k dekhti o */}
+  {/* <createElement1 /> */} {/*Not working... */}
+  </StrictMode>,
 
   // strict mode k bagair meny anotherelement ko essy run kea hai and it has done...
   // anotherElement     //working...
-  createElement         //working...
+  // createElement         //working...
 
   
 
