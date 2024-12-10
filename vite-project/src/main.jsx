@@ -22,7 +22,7 @@ function MyApp(){
 // NOT WORKING...(because its an object)
 // Khudsy create kea hoa syntax:
 
-// const createElement = {
+// const createElement1 = {
 //   type: 'a',
 //   props: {
 //       href: "https://www.google.com",
@@ -44,7 +44,7 @@ const anotherElement = (
 const createElement = React.createElement(
   'a',
   { href: "https://www.google.com", target: "_blank" },
-  "Visit Google"
+  "Visit the Google"
 )
 
 createRoot(document.getElementById('root')).render(
@@ -52,11 +52,14 @@ createRoot(document.getElementById('root')).render(
   // <StrictMode>
   //   {/* <MyApp /> */}
   //   {/* lkin ye tu kam e ni kr rha ku k isk andr object hau chlo new func bana k dekhti o */}
-  //   {/* <createElement /> */}
+  //   {/* <createElement1 /> */} //Not working...
   // </StrictMode>,
 
   // strict mode k bagair meny anotherelement ko essy run kea hai and it has done...
-  anotherElement
+  // anotherElement     //working...
+  createElement         //working...
+
+  
 
 // React akhir h tu js e h na so we can do this below as well...
 //   createRoot(document.getElementById('root')).render(
