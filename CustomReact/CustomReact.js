@@ -35,4 +35,5 @@ const mainContainer = document.querySelector("#root");
 
 // Now inject react in html:
 
+// Yahan pr hum apna customReact create kr rye hain but React mai wo ye sara kam khudsy render k through krta hai hai ...
 customReact(createElement, mainContainer);

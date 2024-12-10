@@ -10,9 +10,9 @@ ii---npm install web-vitals
 
 
 Ab run krny k ways ye hain:
-npm start
-npm run start   (better way to run)
-npm run build
+...npm start
+...npm run start   (better way to run)
+...npm run build
 
 
 ## Fast Way:(Use Vite)
