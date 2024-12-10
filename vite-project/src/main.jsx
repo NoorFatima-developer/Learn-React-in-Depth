@@ -37,6 +37,7 @@ const anotherElement = (
   <a href="http://google.com" target="_blank">Visit Google</a>
 )
 
+const anotheruser = "hi im noora"
 
 // Ab element create krty hain but iss ki dfa react k hesab sy:
 // (Special syntax)
@@ -44,7 +45,10 @@ const anotherElement = (
 const createElement = React.createElement(
   'a',
   { href: "https://www.google.com", target: "_blank" },
-  "Visit the Google"
+  "Visit the Google",
+  anotheruser
+  // ab hum isk andr if else nahi likh skty ku k ye evaluated expression hai...
+  // if() ===> wrong...
 )
 
 createRoot(document.getElementById('root')).render(
