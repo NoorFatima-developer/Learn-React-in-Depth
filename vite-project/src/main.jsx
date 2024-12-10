@@ -40,6 +40,7 @@ createRoot(document.getElementById('root')).render(
   //   {/* <createElement /> */}
   // </StrictMode>,
 
+  // strict mode k bagair meny anotherelement ko essy run kea hai and it has done...
   anotherElement
 
 // React akhir h tu js e h na so we can do this below as well...
