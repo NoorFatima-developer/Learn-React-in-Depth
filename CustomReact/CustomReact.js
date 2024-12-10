@@ -3,6 +3,10 @@ function customReact(reactElement, container){
     // Create an element in DOM
     const domelement = document.createElement(reactElement.type);
     domelement.innerHTML = reactElement.Children;
+    
+    // Add attributes to the element
+    domelement.setAttribute('href', createElement.props.href);
+    domelement.setAttribute('target', createElement.props.target);
 }
 
 
