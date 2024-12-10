@@ -42,6 +42,8 @@ const anotheruser = "hi im noora"
 // Ab element create krty hain but iss ki dfa react k hesab sy:
 // (Special syntax)
 
+// ab yahan createElement ko kon inject krta hai?? 
+// createElement ko hmra compiler babel inject krta hai...
 const createElement = React.createElement(
   'a',
   { href: "https://www.google.com", target: "_blank" },
