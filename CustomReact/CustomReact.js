@@ -9,3 +9,7 @@ const createElement = {
 }
 
 const mainContainer = document.querySelector("#root");
+
+// Now inject react in html:
+
+customReact(reactElement, createElement);
