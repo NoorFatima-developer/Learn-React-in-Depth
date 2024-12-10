@@ -19,7 +19,9 @@ function MyApp(){
 // tu aghr m direct e osko js ka code dedo tu kea pta oska 1 step bach jye or fer b code run o jye tu m ye try krogi
 // TRY:
 
-// NOT WORKING...
+// NOT WORKING...(because its an object)
+// Khudsy create kea hoa syntax:
+
 // const createElement = {
 //   type: 'a',
 //   props: {
@@ -30,9 +32,19 @@ function MyApp(){
 // }
 
 
-// WORKING...(but not a convinient way...)
+// WORKING...(but not a convenient way...)
 const anotherElement = (
   <a href="http://google.com" target="_blank">Visit Google</a>
+)
+
+
+// Ab element create krty hain but iss ki dfa react k hesab sy:
+// (Special syntax)
+
+const createElement = React.createElement(
+  'a',
+  { href: "https://www.google.com", target: "_blank" },
+  "Visit Google"
 )
 
 createRoot(document.getElementById('root')).render(
