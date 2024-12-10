@@ -43,7 +43,7 @@ const anotheruser = "hi im noora"
 // (Special syntax)
 
 // ab yahan createElement ko kon inject krta hai?? 
-// createElement ko hmra compiler babel inject krta hai...
+// createElement ko hmra compiler babel jsmai inject kr rhai hai krta hai...
 const createElement = React.createElement(
   'a',
   { href: "https://www.google.com", target: "_blank" },
