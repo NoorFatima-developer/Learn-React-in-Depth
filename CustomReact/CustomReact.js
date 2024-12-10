@@ -7,9 +7,10 @@ function customReact(reactElement, container){
     // Add attributes to the element
     domelement.setAttribute('href', createElement.props.href);
     domelement.setAttribute('target', createElement.props.target);
+    
+    // Append the element to the container
+    container.appendChild(domelement);
 }
-
-
 
 
 // Basically browser jsx ko understand ni krta wo bs js ko understand krta hai
