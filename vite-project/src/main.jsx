@@ -19,15 +19,18 @@ function MyApp(){
 // tu aghr m direct e osko js ka code dedo tu kea pta oska 1 step bach jye or fer b code run o jye tu m ye try krogi
 // TRY:
 
-const createElement = {
-  type: 'a',
-  props: {
-      href: "https://www.google.com",
-      target: "_blank"
-  },
-  Children: "Visit Google"
-}
+// NOT WORKING...
+// const createElement = {
+//   type: 'a',
+//   props: {
+//       href: "https://www.google.com",
+//       target: "_blank"
+//   },
+//   Children: "Visit Google"
+// }
 
+
+// WORKING...(but not a convinient way...)
 const anotherElement = (
   <a href="http://google.com" target="_blank">Visit Google</a>
 )
