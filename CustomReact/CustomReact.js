@@ -4,9 +4,15 @@ function customReact(reactElement, container){
     const domelement = document.createElement(reactElement.type);
     domelement.innerHTML = reactElement.Children;
     
-    // Add attributes to the element
-    domelement.setAttribute('href', createElement.props.href);
-    domelement.setAttribute('target', createElement.props.target);
+    // Add attributes to the element(Repetetion exists)
+    // domelement.setAttribute('href', createElement.props.href);
+    // domelement.setAttribute('target', createElement.props.target);
+
+    // As repetetion exists at above code so, we will use for loop...
+    for (const prop in reactElement.props){
+        if (prop === 'Children') continue;
+        domelement.setAttribute(prop, reactElement.props[prop]);
+    }
     
     // Append the element to the container
     container.appendChild(domelement);
