@@ -5,3 +5,7 @@
 ## React Documentation website:
 
 https://react.dev
+
+## For Notes:
+
+https://hashnode.com/
