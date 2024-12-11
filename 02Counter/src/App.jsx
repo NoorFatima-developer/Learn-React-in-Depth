@@ -5,14 +5,18 @@ import './App.css'
 
 function App() {
 
-  let counter = 15;
+   // ye essy kam ni kr rye ga, ye state sy kam kryga...
+  // let counter = 15;
+  const [counter, setcounter] = useState(15)
+
   const addValue = () => {
     // Counter++ sy console m tu updation hori hai, lkin UI update nahi horha... So, UI ko update krny klye we use react hooks:
     // So, we can say k UI updation ko React control krta hai...
-    counter++;
+  
     // console.log("Value is added", Math.random());
+    // counter++;
     console.log("Clicked: " , counter);
-    
+    setcounter(counter + 1);
   }
   
     return (
