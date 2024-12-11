@@ -8,6 +8,7 @@ function App() {
     return (
       <>
         <h1>Chai aur Code</h1>
+        <h2>Counter Value: 5</h2>
       </>
     )
     
