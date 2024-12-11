@@ -20,9 +20,9 @@ function App() {
         <h1>Chai aur Code</h1>
         <h2>Counter Value: {counter}</h2>
 
-        <button onClick={addValue}>Add Value</button>
+        <button onClick={addValue}>Add Value {counter}</button>
         <br />
-        <button>Remove Value</button>
+        <button>Remove Value {counter}</button>
       </>
     )
     
