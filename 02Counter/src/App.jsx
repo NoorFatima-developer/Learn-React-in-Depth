@@ -15,8 +15,9 @@ function App() {
   
     // console.log("Value is added", Math.random());
     // counter++;
-    console.log("Clicked: " , counter);
-    setcounter(counter + 1);
+     //print 15 ku k meny counter ki value bdmai update ki h
+     console.log("Clicked: " , counter);
+     setcounter(counter + 1);
   }
   
     return (
