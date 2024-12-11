@@ -7,9 +7,9 @@ function App() {
 
   let counter = 15;
   const addValue = () => {
+    counter++;
     console.log(addValue);
     
-    counter++;
   }
   
     return (
@@ -17,7 +17,7 @@ function App() {
         <h1>Chai aur Code</h1>
         <h2>Counter Value: {counter}</h2>
 
-        <button>Add Value</button>
+        <button onClick={addValue}>Add Value</button>
         <br />
         <button>Remove Value</button>
       </>
