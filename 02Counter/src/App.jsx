@@ -6,6 +6,11 @@ import './App.css'
 function App() {
 
   let counter = 15;
+  const addValue = () => {
+    console.log(addValue);
+    
+    counter++;
+  }
   
     return (
       <>
