@@ -21,29 +21,36 @@ function App() {
     //  console.log("Clicked: " , counter);
     setCounter(prevCounter => {
      const newCounter = prevCounter + 1;
-     console.log("Clicked: " , newCounter);
-     return newCounter > 20 ? 20 : newCounter;
+     const finalCounter = newCounter > 20 ? 20 : newCounter;
+     console.log("Clicked: " , finalCounter);
+     return finalCounter;
+
   });
 }
   
-  // TWO WAYS:
+  // TWO WAYS:(Same for above means add value)
 
   // Aghr tu m return krwana chahti o tu phr m as a callback logi setCounter ko..
   // and aghr mai return ni krwana chahti o tu phr m 2nd method use kr skti o..
+  // And simply aghr condition nahi lgwani tu phr mai aram sy setCounter(counter - 1)krdogi...
+
   // 1--------------
   // function removeValue() {
   //   setCounter(prevCounter =>{
   //   const newCounter = prevCounter - 1;
-  //   console.log("Clicked: " , newCounter);
-  //   return newCounter < 0 ? 0 : newCounter;
+  //   const finalCounter =  newCounter < 0 ? 0 : newCounter;
+  //   console.log("Clicked: " , finalCounter);
+  //   return finalCounter;
   // })
   // }
 
   // 2--------------
   function removeValue(){
   const newCounter = counter - 1;
-  console.log("Clicked: " , newCounter);
-  setCounter(newCounter < 0? 0 : newCounter);
+  const finalCounter = setCounter(newCounter < 0? 0 : newCounter);
+  console.log("Clicked: " , finalCounter);
+  return finalCounter;
+
   // essy b condition add krskti o mai:
   // if(newCounter < 0){
   //   setCounter(0);
