@@ -9,3 +9,7 @@ https://react.dev
 ## For Notes:
 
 https://hashnode.com/
+
+## React Fiber Article:
+
+https://github.com/acdlite/react-fiber-architecture

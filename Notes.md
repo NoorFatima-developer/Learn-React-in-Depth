@@ -1,5 +1,6 @@
 ## Notes Related React:
 
+## Interview Perspective Notes:
 React is core..
 
 Agy isk 2 parts hain...
@@ -76,3 +77,22 @@ const createElement = {
 
 <!-- Ab 1 or chez ye hai k custom react k andr hum log custom function ko define krty hain lkin jsx m ni krty ku?? -->
 ku k jsx m yehi kam render krta hai and yehi tu mzy ki baat hai....issi lye tu react fst hai...
+
+
+
+<!-- Why we use React Hooks; -->
+
+To clear from code I can See in 02Counter Folder App.jsx...
+// Counter++ sy console m tu updation hori hai, lkin UI update nahi horha... So, UI ko update krny klye we use react hooks:
+// So, we can say k UI updation ko React control krta hai...
+
+<!-- Aghr m React ko import ni krongi tu fer ye jesy code run o jyega? -->
+
+Means import m react ana chye na essy:
+import React, { useState } from 'react'
+lkin aghr mai essy krti tu ye tb b run hota hai...
+import { useState } from 'react'
+why?
+
+Ku k ye kam Babel hamara compiler krleta hai khud e React ko import so hmy zrort hi nahi prti.that's why...
+

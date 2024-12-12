@@ -20,5 +20,7 @@ Ab run krny k ways ye hain:
 <!-- Commands -->
 
 i--npm create vite@latest
+give project name: Project_01
+cd Project_01
 ii---npm install
 iii---npm run dev
