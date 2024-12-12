@@ -5,8 +5,9 @@ import './App.css'
 
 function App() {
 
-   // ye essy kam ni kr rye ga, ye state sy kam kryga...
+  // ye essy kam ni kr rye ga, ye state sy kam kryga...
   // let counter = 15;
+
   const [counter, setcounter] = useState(15)
 
   const addValue = () => {
@@ -15,11 +16,18 @@ function App() {
   
     // console.log("Value is added", Math.random());
     // counter++;
-     //print 15 ku k meny counter ki value bdmai update ki h
-     console.log("Clicked: " , counter);
+
+    //print 15 ku k meny counter ki value bdmai update ki h
+    //  console.log("Clicked: " , counter);
      setcounter(counter + 1);
+     console.log("Clicked: " , counter);
   }
   
+  function removeValue() {
+    // counter--;
+    setcounter(counter - 1);
+    console.log("Clicked: " , counter);
+  }
     return (
       <>
         <h1>Chai aur Code</h1>
@@ -27,7 +35,7 @@ function App() {
 
         <button onClick={addValue}>Add Value {counter}</button>
         <br />
-        <button>Remove Value {counter}</button>
+        <button onClick={removeValue}>Remove Value {counter}</button>
       </>
     )
     
