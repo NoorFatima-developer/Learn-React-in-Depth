@@ -96,3 +96,6 @@ why?
 
 Ku k ye kam Babel hamara compiler krleta hai khud e React ko import so hmy zrort hi nahi prti.that's why...
 
+<!-- Jab useState run hota hai tu basically hamara browser rerender hota hai... -->
+
+<!-- Fiber m aghr difing of lists ki performance ko improve krna hai tu osklye keys ko use krna e pryga... -->
