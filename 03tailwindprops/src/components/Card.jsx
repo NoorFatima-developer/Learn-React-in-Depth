@@ -8,7 +8,7 @@ import React from "react";
   // Ab ye oper meny props sy username ko access kea hai ..react k andr props by default hai tu m osk bagair b access krskti o like this:
   //lkin essy mjy destructuring krk krna pryga...
   
-  function cards({username}){
+  function cards({username, btnText="visit mme"}){
     console.log(username);
     
   return (
@@ -28,7 +28,9 @@ import React from "react";
           <p className="block bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-text font-sans text-base font-medium leading-relaxed text-transparent antialiased">
             CEO / Co-Founder
           </p>
-          <button className="text-white">{btnText}</button>
+          {/* Aghr m App.jsx m props e pass ni kr rhi tu osklye m ya tu yahan || laga don ya top m jahan deestrucuring ki wahan add krdo
+          wahan zda better hai ku k readabilty klye..but m yahan pr b krskti o add... */}
+          <button className="text-white">{btnText || "visit me"}</button>
         </div>  
 
         <div className="flex justify-center gap-7 p-6 pt-2">

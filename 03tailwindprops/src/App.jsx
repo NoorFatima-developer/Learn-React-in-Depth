@@ -21,6 +21,9 @@ function App() {
    {/* <Card channel = "Chai aur Code" someArr = {newArr} someObje = {myObj} /> */}
    <Card username = "chaiaurcode" btnText = "Click Me"/>
    <Card username = "Noorfatima" btnText = "Visit Me"/>
+   {/* Ye oss case m hai button jb mai props button pass nahi kr rhi... */}
+   {/* <Card username = "Noorfatima"/> */}
+   
     </>
   )
 }
