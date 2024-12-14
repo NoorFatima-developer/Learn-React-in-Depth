@@ -20,7 +20,7 @@ function App() {
    {/* Aghr mai direct object ya array pass krti tu wo error deta islye mai oskooper bana k nichy {} k thrugh access kr ri o... */}
    {/* <Card channel = "Chai aur Code" someArr = {newArr} someObje = {myObj} /> */}
    <Card username = "chaiaurcode"/>
-   <Card/>
+   <Card username = "Noorfatima"/>
     </>
   )
 }
