@@ -19,12 +19,22 @@ function App() {
 
     //print 15 ku k meny counter ki value bdmai update ki h
     //  console.log("Clicked: " , counter);
+
+  // One more thing ye h k aghr m setCounter k andr prevCounter na likhti or essy counter++ krti tu ye update na kerta...
+  // wo in sb counters as a batch leta..wo dekhta k sbk andr same e kam hora hai tu wo isko single hi smjta...
+  // setCounter(counter + 1)
+  // setCounter(counter + 1)
+  // setCounter(counter + 1)
+  // setCounter(counter + 1)
+  // Islye k aghr mery pss koi esi condition aa e gi h jismai mjhy different  kam krwany hain tu osklye i will use setCounter as a callback like below:
+
     setCounter(prevCounter => {
      const newCounter = prevCounter + 1;
-     const finalCounter = newCounter > 20 ? 20 : newCounter;
+     const newCounter1 = newCounter+1;
+     const newCounter2 = newCounter1 + 1;
+     const finalCounter = newCounter2> 20 ? 20 : newCounter2
      console.log("Clicked: " , finalCounter);
      return finalCounter;
-
   });
 }
   
