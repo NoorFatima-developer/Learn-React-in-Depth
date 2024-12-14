@@ -1,16 +1,16 @@
 import React from "react";
 
 // function cards(props) {
-  // console.log("props", props);
-  // and next jesa k meny channel m username likha hai tu i will access username like this:
-  // console.log(props.username);
-  
-  // Ab ye oper meny props sy username ko access kea hai ..react k andr props by default hai tu m osk bagair b access krskti o like this:
-  //lkin essy mjy destructuring krk krna pryga...
-  
-  function cards({username, btnText="visit mme"}){
-    console.log(username);
-    
+// console.log("props", props);
+// and next jesa k meny channel m username likha hai tu i will access username like this:
+// console.log(props.username);
+
+// Ab ye oper meny props sy username ko access kea hai ..react k andr props by default hai tu m osk bagair b access krskti o like this:
+//lkin essy mjy destructuring krk krna pryga...
+
+function cards({ username, btnText = "visit me" }) {
+  console.log(username);
+
   return (
     <div>
       <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -31,7 +31,7 @@ import React from "react";
           {/* Aghr m App.jsx m props e pass ni kr rhi tu osklye m ya tu yahan || laga don ya top m jahan deestrucuring ki wahan add krdo
           wahan zda better hai ku k readabilty klye..but m yahan pr b krskti o add... */}
           <button className="text-white">{btnText || "visit me"}</button>
-        </div>  
+        </div>
 
         <div className="flex justify-center gap-7 p-6 pt-2">
           <a
