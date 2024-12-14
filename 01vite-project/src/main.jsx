@@ -53,6 +53,9 @@ const createElement = React.createElement(
   // if() ===> wrong...
 )
 
+// wahan custom react k andr custom function tha jisk andr hmny js k elements ko get kea tha...
+// yahan wo function bana k osk andr elements ko get krna logic likhna wo kuch ni krna prta wo sara kam krta hai render...
+
 createRoot(document.getElementById('root')).render(
   
   <StrictMode>
