@@ -14,6 +14,6 @@ https://hashnode.com/
 
 https://github.com/acdlite/react-fiber-architecture
 
-## Components uthany klye website:
+## Tailwind css klye Components uthany klye website:
 
 www.devui.io/components
