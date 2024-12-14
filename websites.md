@@ -16,7 +16,7 @@ https://github.com/acdlite/react-fiber-architecture
 
 ## Tailwind css klye Components uthany klye website:
 
-www.devui.io/components
+https://www.devui.io/components
 
 ##Add icons site add this in html:
 <link

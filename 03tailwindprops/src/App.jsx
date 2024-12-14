@@ -4,11 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-  <h1 className='bg-green-500 text-black p-4 rounded-xl'>tailwindcss</h1>
+  <h1 className='bg-green-500 text-black p-4 rounded-xl mb-4'>tailwindcss</h1>
   <div class="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div class="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
     <img class="h-full w-full rounded" src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar11.1060b63041fdffa5f8ef.png" alt="profile-picture" />
