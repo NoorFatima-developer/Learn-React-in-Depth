@@ -28,7 +28,9 @@ import React from "react";
           <p className="block bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-text font-sans text-base font-medium leading-relaxed text-transparent antialiased">
             CEO / Co-Founder
           </p>
+          <button className="text-white">View Profile</button>
         </div>  
+
         <div className="flex justify-center gap-7 p-6 pt-2">
           <a
             href="#facebook"
