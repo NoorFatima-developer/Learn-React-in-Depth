@@ -86,7 +86,7 @@ To clear from code I can See in 02Counter Folder App.jsx...
 // Counter++ sy console m tu updation hori hai, lkin UI update nahi horha... So, UI ko update krny klye we use react hooks:
 // So, we can say k UI updation ko React control krta hai...
 
-<!-- Aghr m React ko import ni krongi tu fer ye jesy code run o jyega? -->
+<!-- Aghr m React ko import ni krongi tu fer ye kesy code run o jyega? -->
 
 Means import m react ana chye na essy:
 import React, { useState } from 'react'
