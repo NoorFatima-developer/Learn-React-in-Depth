@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect, useRef } from 'react'
 // import './App.css'
 
 function App() {
@@ -9,6 +9,11 @@ function App() {
   const [charAllowed, setCharAllowed] = useState('false');
   const [password, setPassword] = useState('');
 
+  //usRef hook:(useRef ko hum variable k andr store krty hain...)
+
+  const passwordRef = useRef(null)
+
+  // useCallback hook:(basically hmry function ko memorize krta hai jitna hosky...)
   const passwordGenerator = useCallback(( ) => {
     let pass = '';
     let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123';
@@ -23,12 +28,28 @@ function App() {
 
    for (let i = 1; i <= length; i++) {
      let char =  Math.floor(Math.random() * str.length + 1);
-     pass = str.charAt(char)
+     pass += str.charAt(char)
     
    }
-
    setPassword(pass);
   }, [length, numberAllowed, charAllowed, setPassword]);
+
+
+  // not working(react m hum func ko direct call ni krksty) so we will use useEffect hook..
+  // passwordGenerator()
+
+
+  const copyPasswordToClipboard = useCallback( () => {
+    passwordRef.current?.select();
+    // nichy waly dono focus klye hain but range deni o tu must used second wala...
+    passwordRef.current?.focus();
+    // passwordRef.current?.setSelectionRange(0, 999)
+    window.navigator.clipboard.writeText(password)
+  }, [password])
+
+  useEffect(() => {
+    passwordGenerator();
+  }, [length, numberAllowed, charAllowed, passwordGenerator]);
 
   return (
     <>
@@ -41,8 +62,11 @@ function App() {
         className='outline-none w-full py-1 px-3'
         placeholder='Password'
         readOnly
+        ref={passwordRef}
         />
-        <button className='outline-none text-white bg-blue-700 px-3 py-0.3 shrink-0 '>Copy</button>
+        <button 
+        onClick={copyPasswordToClipboard}
+        className='outline-none text-white bg-blue-700 px-3 py-0.3 shrink-0 '>Copy</button>
       </div>
 
       <div className='flex flex-sm gap-x-2'>
@@ -62,7 +86,9 @@ function App() {
             id='numberInput'
             type='checkbox'
             defaultChecked = {numberAllowed}
-            onChange={(prev) => {!prev}}
+            onChange={ () =>
+              setNumberAllowed((prev) => !prev)
+            }
             // onChange={(e) => {setNumberAllowed(e.target.checked? 'true' : 'false')}}
             />
             <label htmlFor='numberInput'>Numbers</label>
@@ -71,11 +97,13 @@ function App() {
             <input 
             id='numberInput'
             type='checkbox'
-            defaultChecked = {numberAllowed}
-            onChange={(prev) => {!prev}}
+            defaultChecked = {charAllowed}
+            onChange={()=>
+              setCharAllowed((prev) =>!prev)
+            }
             // onChange={(e) => {setNumberAllowed(e.target.checked? 'true' : 'false')}}
             />
-            <label htmlFor='numberInput'>Checked</label>
+            <label htmlFor='numberInput'>Characters</label>
           </div>
       </div>
      </div>
@@ -86,3 +114,8 @@ function App() {
 export default App
 
 
+// useCallback basically hum code optimization klye krty hain...
+// Usecallback ka mtlb hai k aghr mera method run hota hai tu osko optimize krdo.
+// lkin useeffect ka mtlb h k hum jb koi cher char kr rye hai tb phr sy osko run krdo
+// and mjy kisi b chez ka reference leta hota hai tu i used useref..
+// and useref tb use hota hai jb m kisi specific part ko copy krna chah ri o let say..
