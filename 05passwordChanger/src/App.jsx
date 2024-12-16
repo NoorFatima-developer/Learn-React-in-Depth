@@ -4,10 +4,10 @@ import './App.css'
 function App() {
 
   const [length, setLength] = useState(8);
-  const [numberAllowed, setNumberAllowed] = useState();
-  const [charAllowed, setCharAllowed] = useState();
+  const [numberAllowed, setNumberAllowed] = useState('false');
+  const [charAllowed, setCharAllowed] = useState('false');
   const [password, setPassword] = useState('');
-  
+
   return (
     <>
 
@@ -18,3 +18,5 @@ function App() {
 }
 
 export default App
+
+
