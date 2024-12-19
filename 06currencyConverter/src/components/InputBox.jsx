@@ -6,7 +6,7 @@ function InputBox({
     amount,
     onAmountChange,
     onCurrencyChange,
-    currencyOption = [],
+    currencyOptions = [],
     selectCurrency = "usd",
     amountDisable = false,
     currencyDisable = false,
@@ -45,7 +45,7 @@ function InputBox({
             >
           
           {/* Aghr loop k andr performance lani hai tu keys must use krni hai... */}
-          {currencyOption.map((currency, index) => (
+          {currencyOptions.map((currency, index) => (
             <option key={index} value={currency}>{currency}</option>
           ))}
             </select>

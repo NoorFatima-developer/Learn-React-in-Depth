@@ -1,4 +1,3 @@
-import './App.css'
 import './index.css'
 import { InputBox } from './components';
 import useCurrencyInfo  from './hooks/useCurrencyinfo';
@@ -14,8 +13,8 @@ function App() {
   const currencyInfo = useCurrencyInfo(from)
   // Mujhy API sy jo data arahai haina objects ki form mai...
   // tu mjy bs keys chahyein, values nahie chahyein iss waja sy m bs keys use krongi...
-
-  const options = Object.keys(currencyInfo)
+  const optioned = Object.keys(currencyInfo)
+  
   const swap = () => {
     setFrom(to)
     setTo(from)
@@ -25,7 +24,7 @@ function App() {
    
   const convert = () => {
     setConvertedAmount(amount * [currencyInfo[to]])
-  }
+  } 
 
   return (
 
@@ -48,7 +47,7 @@ function App() {
                         <InputBox
                             label="From"
                             amount={amount}
-                            currencyOptions={options}
+                            currencyOptions={optioned}
                             onCurrencyChange={(currency) => setAmount(amount)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
@@ -67,9 +66,9 @@ function App() {
                         <InputBox
                             label="To"
                             amount={convertedAmount}
-                            currencyOptions={options}
-                            onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+                            currencyOptions={optioned}
+                            onCurrencyChange={(currency) => setAmount(currency)}
+                            selectCurrency={to}
                             amountDisable
                         />
                     </div>
