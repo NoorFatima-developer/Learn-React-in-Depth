@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useId} from 'react'
 
 // Yeh ek function hai jo multiple props accept karta hai...
 function InputBox({
@@ -15,7 +15,6 @@ function InputBox({
 
   const amountInputId = useId();
   
-
   return (
     <div className= {`bg-white p-3 rounded-lg text-sm flex ${className}`}>
 
