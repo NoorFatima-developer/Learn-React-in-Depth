@@ -2,7 +2,24 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './Layout.jsx'
+import Home from './components/Home/Home.jsx'
+import About from './components/About/About.jsx'
+
+// ye jo createBrowserRouter hai ye apny andr array leta hai or osmai objects jitny b hum lena chahain lkin oss objec k andr 2 chezain leta hai 1 path or 1 element...
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout/>,
+    children: [
+      { path: '', element: <Home/> },
+      { path: '/about', element: <About/> },
+      { path: '/contact', element: <h1>Contact</h1> },
+    ]
+  }
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
