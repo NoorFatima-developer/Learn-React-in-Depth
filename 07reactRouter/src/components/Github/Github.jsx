@@ -1,16 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function Github() {
 
     function GitHub(){
         // fetch data from github api
         // and update state with the fetched data
 
-        const [data, setData] = React.useState([]);
+        const [data, setData] = useState([]);
         // Fetch data and render by using useEffect...
-        useEffect( () => {
-            useEffect( () => {
-                fetch('https://api.github.com/NoorFatima-developer')
+            useEffect(() => {
+                fetch('https://api.github.com/users/NoorFatima-developer')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
@@ -18,14 +16,15 @@ function Github() {
                     setData(data);
                 })
             }, [])
-        })
-    }
+    
 
   return (
     <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
-      Github Followers: 
+      Github Followers: {data.followers}
+      <img src={data.avatar_url} alt='Github Picture' width={200}/>
     </div>
   )
-}
 
-export default Github
+}    
+export default GitHub
+    
