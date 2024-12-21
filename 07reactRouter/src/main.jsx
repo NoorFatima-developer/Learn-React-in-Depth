@@ -8,7 +8,7 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
-import Github from './components/Github/Github.jsx'
+import Github, { githubInfoLoader } from './components/Github/Github.jsx'
 
 // ye jo createBrowserRouter hai ye apny andr array leta hai or osmai objects jitny b hum lena chahain lkin oss objec k andr 2 chezain leta hai 1 path or 1 element...
 
@@ -33,12 +33,13 @@ import Github from './components/Github/Github.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    // Hum route k andr b routes bana skty hain and wo hamary pass nesting rotues kehlyeingy...
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Home/>} />
       <Route path='about' element={<About/>} />
       <Route path='contact' element={<Contact/>} />
       <Route path='user/:id' element={<User/>} />
-      <Route path='github' element={<Github/>} />
+      <Route loader={githubInfoLoader} path='github' element={<Github/>} />
     </Route>
   )
 );
