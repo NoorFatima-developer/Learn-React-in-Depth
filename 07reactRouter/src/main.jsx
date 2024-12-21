@@ -11,5 +11,5 @@ createRoot(document.getElementById('root')).render(
     {/* And ye ReactProvider apny andr 1 hi component leta hai and wo h router or wo apny andr props pass krta hai osk bagair wo kam nahi krta... */}
     
     <RouterProvider router={router}/>
-  </StrictMode>,
+  </StrictMode>
 )
