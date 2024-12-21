@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
+import Contact from './components/Contact/Contact.jsx'
 
 // ye jo createBrowserRouter hai ye apny andr array leta hai or osmai objects jitny b hum lena chahain lkin oss objec k andr 2 chezain leta hai 1 path or 1 element...
 
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: '', element: <Home/> },
       { path: '/about', element: <About/> },
-      { path: '/contact', element: <h1>Contact</h1> },
+      { path: '/contact', element: <Contact/> },
     ]
   }
 ])
