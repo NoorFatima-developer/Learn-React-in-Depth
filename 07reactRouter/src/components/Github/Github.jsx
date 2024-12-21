@@ -6,6 +6,7 @@ function Github() {
         // fetch data from github api
         // and update state with the fetched data
 
+        const [data, setData] = React.useState([]);
         // Fetch data and render by using useEffect...
         useEffect( () => {
             useEffect( () => {
@@ -13,6 +14,7 @@ function Github() {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
+                    // And once m render kerwa logi then I will updatE UI by using UseState ku k data ko set b tu krna h na data k andr...
                     setData(data);
                 })
             }, [])
