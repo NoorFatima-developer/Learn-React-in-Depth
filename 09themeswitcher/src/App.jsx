@@ -13,6 +13,19 @@ function App() {
     setThemeMode("dark")
   }
 
+
+  // Actual change in theme:
+
+  useEffect(() => {
+
+    // Both code have same work, I can use any Code from both of them...
+    // document.querySelector('html').classList.remove("light", "dark")
+    // document.querySelector('html').classList.add(themeMode)
+
+    document.body.classList.remove(themeMode === "light"? "dark" : "light")
+    document.body.classList.add(themeMode)
+  }, [themeMode]);
+
   return (
 
     // ............Consumer........
