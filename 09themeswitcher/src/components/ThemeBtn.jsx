@@ -4,9 +4,14 @@ export default function ThemeBtn() {
     // Ab hum isk andr theme ka data pass krygy..{}
     const {themeMode, lightTheme, darkTheme} = useTheme()
 
-    const onChangeBtn = () => {
+    const onChangeBtn = (e) => {
         // Iss below line ka mtlb hai k currentTheme hmry ps checked jo h wo dark hai...
         const darkModeStatus = e.currentTarget.checked
+        if(darkModeStatus) {
+            darkTheme()
+        }else {
+            lightTheme()
+        }
     };
 
     return (
