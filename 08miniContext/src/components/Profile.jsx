@@ -7,6 +7,9 @@ function Profile() {
     //2----UserCpntext ko (jahan osko create kea hota hai oska path...)
   const {user} = useContext(UserContext)
 
+  if(!user)
+    return <div>Please Login...</div>
+
   return (
     <div>
         Welcome {user.username}
