@@ -13,7 +13,7 @@ function Login() {
     const {setUser} = useContext(UserContext)
 
     // handleSubmit function to handle form submission
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         // By default jb b hum log submit krty hain tu value "url" k through kahi na kahi chly jti hai POST method k through..
         // Tu I want k value kahi b na jye tu osklue I will use this default behaviour...
         e.preventDefault();
@@ -24,6 +24,7 @@ function Login() {
       <h2>Login</h2>
       {/* Abi tk values hawa mai hain wo hum govern krygy values ko by using value and onchange... */}
       <input type="text" value={username} onChange={(e) => setusername(e.target.value)} placeholder='username'/>
+      {" "}
       <input type="password" value={password} onChange={(e) => setpassword(e.target.value)} placeholder='password'/>
       <button onClick={handleSubmit}>Submit</button>
     </div>
