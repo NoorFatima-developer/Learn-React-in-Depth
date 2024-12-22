@@ -99,3 +99,11 @@ Ku k ye kam Babel hamara compiler krleta hai khud e React ko import so hmy zrort
 <!-- Jab useState run hota hai tu basically hamara browser rerender hota hai... -->
 
 <!-- Fiber m aghr difing of lists ki performance ko improve krna hai tu osklye keys ko use krna e pryga... -->
+
+
+<!-- React router dom k andr hum a tag ku use ni krty or Link tag ku use krty hain -->
+
+
+React k andr hum log 'a' tag islye use nahi krty ku k ismai hamara pura page refresh hota hai...
+aghr pura page e refresh krwana hai tu phr react kis kam ka?
+that's why we use link tag in react instead of a tag...
