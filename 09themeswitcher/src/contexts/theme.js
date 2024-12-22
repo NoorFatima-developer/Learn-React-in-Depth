@@ -7,8 +7,6 @@ import { createContext, useContext } from "react";
 
 // Lkin issmai hum createContext or provide wala kam 1 e file m krygy...
 
-
-
 // ...........createContext......
 export const ThemeContext = createContext({
     themeMode: "light",
@@ -21,6 +19,7 @@ export const ThemeContext = createContext({
 export const ThemeProvider = ThemeContext.Provider
 
 
+// Ye useTheme() jo function hai ye Theme Ka Mode change kryga jesy e hum toggle pr click krygy tu isko hum ThemeBtn mai e use krygy iska data pass krk...
 export default function useTheme(){
     return useContext(ThemeContext)
 }
