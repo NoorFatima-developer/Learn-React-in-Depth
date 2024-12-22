@@ -9,7 +9,7 @@ function Profile() {
 
   return (
     <div>
-        Profile
+        Welcome {user.username}
     </div>
   )
 }
