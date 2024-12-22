@@ -34,7 +34,7 @@ function App() {
     // Ab pichly context API k andr hmny jo b provider k andr methods bananye thy wo define b thy ab ye tu define ni tu osklye hum 1 1 ko pkr k seoarate func bana k osmai daal degy tu yr b same oski trhan hi behave krygy....
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
          
-          <div className="flex flex-wrap min-h-screen items-center">
+          <div className="flex flex-wrap min-h-screen items-center bg-black">
                 <div className="w-full">
                     <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
                         {/* ThemeBtn */}

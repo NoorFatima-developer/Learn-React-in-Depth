@@ -1,4 +1,5 @@
 import React from "react";
+import useTheme from "../contexts/theme";
 export default function ThemeBtn() {
     
     // Ab hum isk andr theme ka data pass krygy..{}
