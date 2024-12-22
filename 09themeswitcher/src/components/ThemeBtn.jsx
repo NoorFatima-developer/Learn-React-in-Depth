@@ -1,5 +1,8 @@
+import React from "react";
 export default function ThemeBtn() {
     
+    // Ab hum isk andr theme ka data pass krygy..{}
+    const {themeMode, lightTheme, darkTheme} = useTheme()
 
     return (
         <label className="relative inline-flex items-center cursor-pointer">
