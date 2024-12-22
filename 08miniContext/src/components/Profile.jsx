@@ -11,9 +11,7 @@ function Profile() {
     return <div>Please Login...</div>
 
   return (
-    <div>
-        Welcome {user.username}
-    </div>
+    <div> Welcome {user.username} </div>
   )
 }
 
