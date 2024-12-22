@@ -15,7 +15,6 @@ function App() {
     setThemeMode("dark")
   }
 
-
   // Actual change in theme:
 
   useEffect(() => {
