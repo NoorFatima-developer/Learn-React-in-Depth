@@ -17,10 +17,16 @@ export const todoSlice = createSlice({
                 // payload apny apmai 1 object hai tu hum iss kk andr sy kuch b access krskty hain dot laga k...
                 text: action.payload.text
             }
+            // acess state...
+            state.todos.push(todo);
         },
 
+        // state k andr current state or action k andr jo b data milta hai wo...
         removeTodo: (state, action) => {
-
+                state.todos = state.todos.filter((todo) => todo.id !== action.payload)
         }
     }
 })
+
+export const {addTodo, removeTodo}  = todoSlice.actions
+export default todoSlice.reducer;
