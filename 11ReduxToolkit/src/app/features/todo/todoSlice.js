@@ -1,8 +1,9 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { act } from "react";
 
 const initialState = {
-  todos: [{id:1, text: "Hello world"}]
+  todos: [{id:1, text: "Hello world"}],
+  inputValue: "",
+  updatingTodoId: null, // hum tb hua ki which todo ko update krna hai...
 };
 
 export const todoSlice = createSlice({
@@ -24,9 +25,34 @@ export const todoSlice = createSlice({
         // state k andr current state or action k andr jo b data milta hai wo...
         removeTodo: (state, action) => {
                 state.todos = state.todos.filter((todo) => todo.id !== action.payload)
-        }
-    }
-})
+        },
 
-export const {addTodo, removeTodo}  = todoSlice.actions
+        updateTodo: (state, action) => {
+            state.todos = state.todos.map((todo) => {
+              if (todo.id === action.payload.id) {
+                return { ...todo, text: action.payload.text }; // update the todo text
+              }
+              return todo;
+            });
+            state.inputValue = ""; // reset the input value after update
+            state.updatingTodoId = null; // reset the updating ID
+          },
+      
+          // Action for handling input value change
+          setInputValue: (state, action) => {
+            state.inputValue = action.payload;
+          },
+      
+          // Action for setting the todo ID to be updated
+          setUpdatingTodoId: (state, action) => {
+            state.updatingTodoId = action.payload;
+          },
+        },
+      });
+
+export const {addTodo, removeTodo, updateTodo, setInputValue, setUpdatingTodoId}  = todoSlice.actions
 export default todoSlice.reducer;
+
+
+
+// 02-----------Isk andr reducers mai wo sb kuch hai jo meny add krna hai...
