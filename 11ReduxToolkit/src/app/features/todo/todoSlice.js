@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-  todos: [{id:1, text: "Hello world"}],
+  todos: [{id:1, text: " Learn Redux "}],
   inputValue: "",
   updatingTodoId: null, // hum tb hua ki which todo ko update krna hai...
 };
