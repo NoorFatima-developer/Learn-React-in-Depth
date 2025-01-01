@@ -14,15 +14,19 @@
 
 import React, { useRef, useState } from 'react';
 
+function App (){
 const refElement = useRef("");
 const [name, setName] = useState("Noor");
 
-
-return
-<>
+    return(
+    <>
     <h1>Learning UseRef</h1>
     <input type='text' value={name}></input>
+    </>
+)
 
 
-</>
+}
+
+export default App;
 
