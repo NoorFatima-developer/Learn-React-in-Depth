@@ -1,6 +1,9 @@
-import React from 'react'
+import {React, memo} from 'react'
 
-function ChildA() {
+// Accept Learning as a prop...
+function ChildA({Learning}) {
+    console.log("Child Component");
+    
   return (
     <div>
       
@@ -8,4 +11,4 @@ function ChildA() {
   )
 }
 
-export default ChildA
+export default memo(ChildA)

@@ -86,12 +86,17 @@ import ChildA from './ChildA';
 function App(){
 
     const [add, setAdd] = useState(0);
+    const Learning = ()=>{
+        // Some operation:
+    }
+
     return(
         <>
         <div className='App'>
         <h1>Learning useCallback</h1>
         <h1>{add}</h1>
-        <ChildA/>
+        {/* Pass Learning as a prop... */}
+        <ChildA Learning={Learning}/>
         <button onClick={()=> setAdd(add + 1)}>Addition</button>
         </div>
         </>
