@@ -1,32 +1,35 @@
-// UseState:
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-// Ye hamari state ko UI pr update krta hai..
+function App() {
+  const [count, setCount] = useState(0)
 
-// Use Effect
-
-// jesy e hamara coponent render hota hai tu UseEffect run hota hai baki hum ismai empty array dal skti hai osko rokny klye...
-// Baki API sy data wagaira fetch krwana ho tu osklye b useEffect use hota hai...
-
-// UseRef
-
-// Ye hmry DOM ko manipulate krta hai...
-// Isko Code sy smjty haun...Ismai hum reference dety hain onchange mai mostly ye inputs mai use hota hai...
-
-import React, { useRef, useState } from 'react';
-
-function App (){
-const refElement = useRef("");
-const [name, setName] = useState("Noor");
-
-    return(
+  return (
     <>
-    <h1>Learning UseRef</h1>
-    <input type='text' value={name}></input>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
-)
-
-
+  )
 }
 
-export default App;
-
+export default App
