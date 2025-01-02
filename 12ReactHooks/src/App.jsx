@@ -43,7 +43,7 @@ import './App.css'
 
 // 04--- UseMemo Hook => Increase Applucation Performance ...Reuse Function, it means jb hum kisi func ko 1 dfa use krty hain tu it stores that function in cache memory and jb hmy dubraa need hoti h tu hum
 // log ossi function ko reuse krlety hain instead of k hum new function ko create krain...
-
+// UseMemo Hook returns a memoized value...
 
 // function App() {
 //   const [Add, setAdd] = useState(0);
@@ -80,4 +80,5 @@ import './App.css'
 
 
 // 05... useCallback Hook 
+// UseCallback Hook returns a memoized function...
 
