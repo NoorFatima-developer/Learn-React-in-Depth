@@ -2,6 +2,7 @@ import { useState, useRef, useMemo } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ChildA from './ChildA';
 
 
 // 01...UseState => Update UI...
@@ -82,3 +83,19 @@ import './App.css'
 // 05... useCallback Hook 
 // UseCallback Hook returns a memoized function...
 
+function App(){
+
+    const [add, setAdd] = useState(0);
+    return(
+        <>
+        <div className='App'>
+        <h1>Learning useCallback</h1>
+        <h1>{add}</h1>
+        <ChildA/>
+        <button onClick={()=> setAdd(add + 1)}>Addition</button>
+        </div>
+        </>
+    )
+}
+
+export default App;
