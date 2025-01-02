@@ -53,10 +53,10 @@ function App() {
     <>
       <div className='App'>
         <h1>Learning UseMemo</h1>
-        <button>Increment</button>
+        <button onClick={() => setAdd(Add + 1)}>Increment</button>
         <span>{Add}</span>
         <br />
-        <button>Decrement</button>
+        <button onClick={() => setSubtract(Subtract - 1)}>Decrement</button>
         <span>{Subtract}</span>
 
       </div>
