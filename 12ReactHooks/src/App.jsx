@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -45,33 +45,36 @@ import './App.css'
 // log ossi function ko reuse krlety hain instead of k hum new function ko create krain...
 
 
-function App() {
-
-  const [Add, setAdd] = useState(0);
-  const [Subtract, setSubtract] = useState(100);
-
-  // Subtract function ka add sy koi lena dena ni hai fer b performance khrab hori hai...
-  // So, we will use Memo Hook to make performance better ...
+// function App() {
+//   const [Add, setAdd] = useState(0);
+//   const [Subtract, setSubtract] = useState(100);
+//   // Subtract function ka add sy koi lena dena ni hai fer b performance khrab hori hai...
+//   // So, we will use Memo Hook to make performance better ...
   
-  function multiply(){
-    console.log("*******************");
-    return Add * 10;
-  }
+//   // function multiply(){
+//   //   console.log("*******************");
+//   //   return Add * 10;
+//   // }
 
-  return(
-    <>
-      <div className='App'>
-        <h1>Learning UseMemo</h1>
-        {multiply()}<br/>
-        <button onClick={() => setAdd(Add + 1)}>Increment</button>
-        <span>{Add}</span>
-        <br />
-        <button onClick={() => setSubtract(Subtract - 1)}>Decrement</button>
-        <span>{Subtract}</span>
+//   // UseMemo Hook...
+//   const multiplication = useMemo( function multiply(){
+//     console.log("*******************");
+//     return Add * 10;
+//   }, [Add])
+//   return(
+//     <>
+//       <div className='App'>
+//         <h1>Learning UseMemo</h1>
+//         {/* {multiply()}<br/> */}
+//         {multiplication}<br/>
+//         <button onClick={() => setAdd(Add + 1)}>Increment</button>
+//         <span>{Add}</span>
+//         <br />
+//         <button onClick={() => setSubtract(Subtract - 1)}>Decrement</button>
+//         <span>{Subtract}</span>
+//       </div>
+//     </>
+//   )
+// }
+// export default App;
 
-      </div>
-    </>
-  )
-}
-
-export default App;
