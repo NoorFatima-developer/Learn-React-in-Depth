@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from 'react'
+import { useState, useRef, useMemo, useCallback } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -86,9 +86,10 @@ import ChildA from './ChildA';
 function App(){
 
     const [add, setAdd] = useState(0);
-    const Learning = ()=>{
+    const [count, setCount] = useState(0);
+    const Learning = useCallback( ()=>{
         // Some operation:
-    }
+    }, [] )
 
     return(
         <>
@@ -96,8 +97,9 @@ function App(){
         <h1>Learning useCallback</h1>
         <h1>{add}</h1>
         {/* Pass Learning as a prop... */}
-        <ChildA Learning={Learning}/>
+        <ChildA Learning={Learning} count={count}/>
         <button onClick={()=> setAdd(add + 1)}>Addition</button>
+        <button onClick={()=> setCount(count + 2)}>Count</button>
         </div>
         </>
     )
