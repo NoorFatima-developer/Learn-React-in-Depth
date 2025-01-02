@@ -4,13 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState(0)
 
   return (
     <>
-     <h1>Learn UseRef</h1>
+     <h1>Learning UseRef</h1>
+     <input type='text' value={name}></input>
     </>
   )
 }
 
 export default App
+
