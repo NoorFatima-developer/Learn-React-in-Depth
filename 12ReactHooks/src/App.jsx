@@ -49,6 +49,12 @@ function App() {
 
   const [Add, setAdd] = useState(0);
   const [Subtract, setSubtract] = useState(100);
+
+  function multiply(){
+    console.log("*******************");
+    return Add * 10;
+  }
+  
   return(
     <>
       <div className='App'>
