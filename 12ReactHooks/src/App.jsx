@@ -50,15 +50,19 @@ function App() {
   const [Add, setAdd] = useState(0);
   const [Subtract, setSubtract] = useState(100);
 
+  // Subtract function ka add sy koi lena dena ni hai fer b performance khrab hori hai...
+  // So, we will use Memo Hook to make performance better ...
+  
   function multiply(){
     console.log("*******************");
     return Add * 10;
   }
-  
+
   return(
     <>
       <div className='App'>
         <h1>Learning UseMemo</h1>
+        {multiply()}<br/>
         <button onClick={() => setAdd(Add + 1)}>Increment</button>
         <span>{Add}</span>
         <br />
