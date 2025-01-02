@@ -83,26 +83,32 @@ import ChildA from './ChildA';
 // 05... useCallback Hook 
 // UseCallback Hook returns a memoized function...
 
-function App(){
+// function App(){
 
-    const [add, setAdd] = useState(0);
-    const [count, setCount] = useState(0);
-    const Learning = useCallback( ()=>{
-        // Some operation:
-    }, [] )
+//     const [add, setAdd] = useState(0);
+//     const [count, setCount] = useState(0);
+//     const Learning = useCallback( ()=>{
+//         // Some operation:
+//     }, [count] )
 
-    return(
-        <>
-        <div className='App'>
-        <h1>Learning useCallback</h1>
-        <h1>{add}</h1>
-        {/* Pass Learning as a prop... */}
-        <ChildA Learning={Learning} count={count}/>
-        <button onClick={()=> setAdd(add + 1)}>Addition</button>
-        <button onClick={()=> setCount(count + 2)}>Count</button>
-        </div>
-        </>
-    )
-}
+//     return(
+//         <>
+//         <div className='App'>
+//         <h1>Learning useCallback</h1>
+//         <h1>{add}</h1>
+//         {/* Pass Learning as a prop... */}
+//         <ChildA Learning={Learning} count={count}/>
+//         <button onClick={()=> setAdd(add + 1)}>Addition</button>
+//         <h1>{count}</h1>
+//         <button onClick={()=> setCount(count + 2)}>Count</button>
+//         </div>
+//         </>
+//     )
+// }
 
-export default App;
+// export default App;
+
+// 06... Controlled and Uncontrolled Components...
+
+// Controlled components React handle krta hai and osklye hum log useState() use krskty hain and events...
+// Uncontrolled components React handle nahi krta balky DOM directly handle krta hai tu osklye we use useRef in inout field...
