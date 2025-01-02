@@ -45,5 +45,23 @@ import './App.css'
 // log ossi function ko reuse krlety hain instead of k hum new function ko create krain...
 
 
+function App() {
 
+  const [Add, setAdd] = useState(0);
+  const [Subtract, setSubtract] = useState(100);
+  return(
+    <>
+      <div className='App'>
+        <h1>Learning UseMemo</h1>
+        <button>Increment</button>
+        <span>{Add}</span>
+        <br />
+        <button>Decrement</button>
+        <span>{Subtract}</span>
 
+      </div>
+    </>
+  )
+}
+
+export default App;
